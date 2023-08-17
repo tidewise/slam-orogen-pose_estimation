@@ -332,3 +332,21 @@ task_context "OrientationInitialization" do
 
     periodic 0.01
 end
+
+task_context "UWPoseEstimatorFixedCovariance" do
+    subclasses "UWPoseEstimator"
+    needs_configuration
+
+    # Depth covariance element
+    property "cov_depth", "double"
+    # Orientation covariance matrix
+    property "cov_orientation", "/base/Matrix3d"
+end
+
+task_context "HighDelayPoseEstimatorFixedCovariance" do
+    subclasses "HighDelayPoseEstimator"
+    needs_configuration
+
+    # XY samples covariance matrix
+    property "cov_xy_samples", "/base/Matrix3d"
+end

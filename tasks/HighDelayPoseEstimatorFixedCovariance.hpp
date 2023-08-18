@@ -30,7 +30,7 @@ namespace pose_estimation {
         friend class HighDelayPoseEstimatorFixedCovarianceBase;
 
     protected:
-        base::Matrix3d m_cov_xy_samples;
+        base::Matrix2d m_cov_xy_samples;
         void xy_position_samplesTransformerCallback(const base::Time& ts,
             const ::base::samples::RigidBodyState& xy_position_samples_sample);
 

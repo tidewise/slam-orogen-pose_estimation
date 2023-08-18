@@ -348,5 +348,5 @@ task_context "HighDelayPoseEstimatorFixedCovariance" do
     needs_configuration
 
     # XY samples covariance matrix
-    property "cov_xy_samples", "/base/Matrix3d"
+    property "cov_xy_samples", "/base/Matrix2d"
 end
